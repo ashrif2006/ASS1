@@ -10,7 +10,82 @@
         <!-- Your code  this for navbar don't write here!!!!!-->
     </div>
     <div class="content">
-        <!-- Your code -->
+         <div>
+
+                <h1>Post a New Job</h1>
+                <p>Add a job opportunity using the form below</p>
+
+        
+                <form action="#" method="POST">
+                    <div>
+                        <label>Job Title:</label>
+                        <input type="text" required>
+                    </div>
+
+                    <div>
+                        <label>Company Name:</label>
+                        <input type="text" required>
+
+                    </div>
+
+                    <div>
+
+                        <label>Job Status:</label>
+                        <select required>
+                            <option>Select Status</option>
+                            <option>Full Time</option>
+                            <option>Part Time</option>
+                            <option>Remote</option>
+                            <option>Internship</option>
+                            <option>Contract</option>
+                        </select>
+                    </div>
+
+
+
+                    <div>
+                        <label>Salary (USD):</label>
+                        <input type="number"
+
+                               min="1000" max="100000"
+                               step="500"
+                               placeholder="1000 - 100000"
+                               required>
+
+                        <small>Minimum: $1000, Maximum: $100000</small>
+
+                    </div>
+
+                    <div>
+                        <label>Job Description:</label>
+                        <textarea
+
+                            rows="8"
+
+                            minlength="50"
+                            maxlength="2000"
+                            placeholder="Write job details..."  required>
+                        </textarea>
+                        <small>Minimum 50 characters</small>
+                    </div>
+                    <div>
+                        <label>Location:</label>
+                        <input type="text" required>
+                    </div>
+                    <div>
+                        <label>Application Deadline:</label>
+                        <input type="date" required>
+                    </div>
+                    <div>
+                        <label>Contact Email:</label>
+                        <input type="email" required>
+                    </div>
+                    <div>
+                        <button type="submit">Post Job</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>    
 </body>
 </html>
