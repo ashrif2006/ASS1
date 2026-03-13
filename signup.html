@@ -1,17 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="navbar">
-        <!-- your code -->
-    </div>
-    <div class="content">
-        <!-- your code -->
-    </div>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up</title>
+  </head>
+
+  <body>
+    <h2>Create Account</h2>
+
+    <form>
+      <label>Full Name</label>
+      <input type="text" name="name" required minlength="3" />
+      <br />
+      <label>Email</label>
+      <input type="email" name="email" required />
+      <br />
+      <label>Password</label>
+      <input type="password" name="password" required minlength="6" />
+      <br />
+      <label>Confirm Password</label>
+      <input type="password" name="confirmPassword" required />
+      <br />
+      <label>Phone</label>
+      <input type="tel" name="phone" placeholder="11 digits"/>
+      <br />
+      <label>Upload CV</label>
+      <input type="file" name="cv" />
+      <br />
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </body>
 </html>
