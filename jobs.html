@@ -1,58 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jobs</title>
-</head>
-<body>
-    <div class="navbar">
-        <!-- Your code  this for navbar don't write here!!!!!-->
-    </div>
-
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="applied-job.html">Applied Jobs</a>
+      <a href="login.html">Logout</a>
+    </nav>
+    <hr >
     <div class="content">
-        <h2>Search for a job </h2>
-        <form action="" method="">
+      <h2>Search for a job</h2>
+      <form action="" method="">
+        <label for="Title"> Job Title:</label>
+        <input
+          type="text"
+          name="Title"
+          id="Title"
+          placeholder="Enter job title"
+        /><br />
+        <br />
 
-            <label for="Title"> Job Title:</label>
-            <input type="text" name="Title" id="Title" placeholder="Enter job title"><br> <br>
+        <label for="Experience"> Years of Experience:</label>
+        <input
+          type="number"
+          name="Experience"
+          id="Experience"
+          min="0"
+          placeholder="Number of years of experience"
+        /><br />
+        <br />
 
-            <label for="Experience"> Years of Experience:</label>
-            <input type="number" name="Experience" id="Experience" min="0" placeholder="Number of years of experience"><br> <br>
+        <button type="Submit">Search</button>
+      </form>
+      <br />
 
-            <button type="Submit"> Search</button>
-        </form> <br>
+      <h2>Job List</h2>
 
-        <h2>Job List</h2>
-
-        <table border="1">
-            <thead>
-                <tr>
-                    <th> Job Title</th>
-                    <th> Company</th>
-                    <th> Salary</th>
-                    <th> Staus</th>
-                    <th> View</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a href="jop-details.html">View</a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                   <td><a href="jop-details.html">View</a></td>
-                </tr>
-            </tbody>
-        </table>
-
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Salary</th>
+            <th>Staus</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="jop-details.html">View</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="jop-details.html">View</a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</body>
+    <hr />
+
+    <footer>
+      <p>© 2026 Job Portal</p>
+    </footer>
+  </body>
 </html>
