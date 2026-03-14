@@ -1,86 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jobs</title>
 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="applied-job.html">Applied Jobs</a>
+      <a href="login.html">Logout</a>
+    </nav>
+    <hr >
+    <div class="content">
+      <h2>Search for a job</h2>
+      <form action="" method="">
+        <label for="Title"> Job Title:</label>
+        <input
+          type="text"
+          name="Title"
+          id="Title"
+          placeholder="Enter job title"
+        /><br />
+        <br />
 
+        <label for="Experience"> Years of Experience:</label>
+        <input
+          type="number"
+          name="Experience"
+          id="Experience"
+          min="0"
+          placeholder="Number of years of experience"
+        /><br />
+        <br />
 
-</head>
+        <button type="Submit">Search</button>
+      </form>
+      <br />
 
-<body>
+      <h2>Job List</h2>
 
-    
-<!-- Navbar -->
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Salary</th>
+            <th>Staus</th>
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="jop-details.html">View</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="jop-details.html">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
 
-
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="applied-job.html">Applied Jobs</a>
-    <a href="login.html">Login</a>
-</div>
-
-
-<div class="content">
-
-<h2>Search for a Job</h2>
-
-<form>
-
-<label for="Title">Job Title:</label>
-<input type="text" id="Title" placeholder="Enter job title">
-
-<br><br>
-
-<label for="Experience">Years of Experience:</label>
-<input type="number" id="Experience" min="0" placeholder="Years of experience">
-
-<br><br>
-
-<button type="submit">Search</button>
-
-</form>
-
-
-<h2>Job List</h2>
-
-<table border="1">
-
-<thead>
-<tr>
-<th>Job Title</th>
-<th>Company</th>
-<th>Salary</th>
-<th>Status</th>
-<th>View</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>Frontend Developer</td>
-<td>Google</td>
-<td>$4000</td>
-<td>Open</td>
-<td><a href="job-details.html">View</a></td>
-</tr>
-
-<tr>
-<td>Software Tester</td>
-<td>Microsoft</td>
-<td>$3500</td>
-<td>Open</td>
-<td><a href="job-details.html">View</a></td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</body>
+    <footer>
+      <p>© 2026 Job Portal</p>
+    </footer>
+  </body>
 </html>
+>>>>>>> 635215712d637ee842df85d4e740c8cd465677a2

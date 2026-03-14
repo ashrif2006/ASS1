@@ -1,47 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div class="navbar">
-        <!-- Your code  this for navbar don't write here!!!!!-->
-    </div>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="post-job.html">Post Job</a>
+        <a href="login.html">Logout</a>
+      </nav>
+    </header>
+    <hr />
     <div class="content">
-        <h2>Edit Job</h2>
+      <h2>Edit Job</h2>
 
-<form>
+      <form>
+        <label for="jobId">Job ID</label><br />
+        <input
+          type="text"
+          id="jobId"
+          value="101"
+          readonly
+          required
+        /><br /><br />
 
-<label for="jobId">Job ID</label><br>
-<input type="text" id="jobId" value="101" readonly required><br><br>
+        <label for="jobTitle">Job Title</label><br />
+        <input
+          type="text"
+          id="jobTitle"
+          value="Frontend Developer"
+          required
+        /><br /><br />
 
-<label for="jobTitle">Job Title</label><br>
-<input type="text" id="jobTitle" value="Frontend Developer" required><br><br>
+        <label for="salary">Salary</label><br />
+        <input
+          type="number"
+          id="salary"
+          value="1000"
+          min="0"
+          required
+        /><br /><br />
 
-<label for="salary">Salary</label><br>
-<input type="number" id="salary" value="1000" min="0" required><br><br>
+        <label for="company">Company Name</label><br />
+        <input
+          type="text"
+          id="company"
+          value="ABC Company"
+          required
+        /><br /><br />
 
-<label for="company">Company Name</label><br>
-<input type="text" id="company" value="ABC Company" required><br><br>
+        <label for="status">Job Status</label><br />
+        <select id="status" required>
+          <option value="open" selected>Open</option>
+          <option value="closed">Closed</option></select
+        ><br /><br />
 
-<label for="status">Job Status</label><br>
-<select id="status" required>
-<option value="open" selected>Open</option>
-<option value="closed">Closed</option>
-</select><br><br>
+        <label for="experience">Years of Experience</label><br />
+        <input
+          type="number"
+          id="experience"
+          value="2"
+          min="0"
+          required
+        /><br /><br />
 
-<label for="experience">Years of Experience</label><br>
-<input type="number" id="experience" value="2" min="0" required><br><br>
+        <label for="description">Description</label><br />
+        <textarea id="description" rows="5" required>
+We are looking for a skilled frontend developer.</textarea
+        ><br /><br />
 
-<label for="description">Description</label><br>
-<textarea id="description" rows="5" required>We are looking for a skilled frontend developer.</textarea><br><br>
-
-<button type="submit">Update</button>
-<button type="button">Delete</button>
-
-</form>
-    </div>    
-</body>
+        <button type="submit">Update</button>
+        <button type="button">Delete</button>
+      </form>
+    </div>
+    <hr />
+    <footer>
+      <p>© 2026 Job Portal</p>
+    </footer>
+  </body>
 </html>
