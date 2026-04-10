@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F8FAFC;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 500px;
+  margin-top: 60px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: #1F2937;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #2563EB;
+  color: white;
+}
+
+#deleteBtn {
+  background-color: #EF4444;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
