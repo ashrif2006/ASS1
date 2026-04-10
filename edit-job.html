@@ -1,85 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="post-job.html">Post Job</a>
-        <a href="login.html">Logout</a>
-      </nav>
-    </header>
-    <hr />
-    <div class="content">
-      <h2>Edit Job</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Job</title>
 
-      <form>
-        <label for="jobId">Job ID</label><br />
-        <input
-          type="text"
-          id="jobId"
-          value="101"
-          readonly
-          required
-        /><br /><br />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-        <label for="jobTitle">Job Title</label><br />
-        <input
-          type="text"
-          id="jobTitle"
-          value="Frontend Developer"
-          required
-        /><br /><br />
+<body>
 
-        <label for="salary">Salary</label><br />
-        <input
-          type="number"
-          id="salary"
-          value="1000"
-          min="0"
-          required
-        /><br /><br />
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="post-job.html">Post Job</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
 
-        <label for="company">Company Name</label><br />
-        <input
-          type="text"
-          id="company"
-          value="ABC Company"
-          required
-        /><br /><br />
+<hr>
 
-        <label for="status">Job Status</label><br />
-        <select id="status" required>
-          <option value="open" selected>Open</option>
-          <option value="closed">Closed</option></select
-        ><br /><br />
+<div class="content">
+  <h2>Edit Job</h2>
 
-        <label for="experience">Years of Experience</label><br />
-        <input
-          type="number"
-          id="experience"
-          value="2"
-          min="0"
-          required
-        /><br /><br />
+  <form id="jobForm">
 
-        <label for="description">Description</label><br />
-        <textarea id="description" rows="5" required>
-We are looking for a skilled frontend developer.</textarea
-        ><br /><br />
+    <label>Job ID</label>
+    <input type="text" id="jobId" readonly>
 
-        <button type="submit">Update</button>
-        <button type="button">Delete</button>
-      </form>
+    <label>Job Title</label>
+    <input type="text" id="jobTitle" required>
+
+    <label>Salary</label>
+    <input type="number" id="salary" min="0" required>
+
+    <label>Company Name</label>
+    <input type="text" id="company" required>
+
+    <label>Job Status</label>
+    <select id="status">
+      <option value="open">Open</option>
+      <option value="closed">Closed</option>
+    </select>
+
+    <label>Years of Experience</label>
+    <input type="number" id="experience" min="0" required>
+
+    <label>Description</label>
+    <textarea id="description" rows="5" required></textarea>
+
+    <div class="buttons">
+      <button type="submit">Update</button>
+      <button type="button" id="deleteBtn">Delete</button>
     </div>
-    <hr />
-    <footer>
-      <p>© 2026 Job Portal</p>
-    </footer>
-  </body>
+
+  </form>
+</div>
+
+<hr>
+
+<footer>
+  <p>©️ 2026 Job Portal</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+
+document.getElementById("jobForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let title = document.getElementById("jobTitle").value;
+  let salary = document.getElementById("salary").value;
+  let company = document.getElementById("company").value;
+
+  if (title === "" || salary === "" || company === "") {
+    alert("Please fill all fields");
+    return;
+  }
+
+  alert("Job Updated Successfully ");
+  window.location.href = "jobs.html";
+});
+
+document.getElementById("deleteBtn").addEventListener("click", function() {
+
+  let confirmDelete = confirm("Are you sure you want to delete this job?");
+
+  if (confirmDelete) {
+    alert("Job Deleted ");
+    window.location.href = "jobs.html";
+  }
+
+});
+
+</script>
+
+</body>
 </html>
+        
+         
+         
+
+        
