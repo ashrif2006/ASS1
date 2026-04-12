@@ -3,27 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Applied Jobs</title>
+
     <link rel="stylesheet" href="./CSS/appliedjobs.css">
+        <title>Applied Jobs</title>
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
  
   <body>
-    <header>
+    <!-- GUEST NAVBAR VERSION -->
+    <header class="guest-navbar">
       <nav>
-        <a href="index.html">Home</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="login.html">Logout</a>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+
+          <a href="jobs.html" >Jobs</a>
+          <a href="applied-job.html" class="active">Applied Jobs</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="/index.html">LogOut</a>
+        </div>
       </nav>
     </header>
-    <hr />
+
+
+    <!-- LOGGED-IN NAVBAR VERSION -->
+    <header class="logged-in-navbar hidden">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+          <a href="index.html">Home</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="job-details.html">Job Details</a>
+          <a href="applied-job.html" class="active">Applied Jobs</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+
     <h1>My Applied Jobs</h1>
     <p>Here are the jobs you have applied for.</p>
     <div class="jobs-container"></div>
 
-    
-    <hr />
-    <footer>
-      <p>© 2026 Job Portal</p>
+
+    <footer style="position: absolute; bottom: 0;left: 0 ; width: 100%; text-align: center;">
+      <p>© 2026 JobFinder. All rights reserved.</p>
     </footer>
     <script>
     document.addEventListener("DOMContentLoaded", function () {

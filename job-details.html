@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>TechHire - Job Details</title>
+ <link rel="stylesheet" href="CSS/style.css" />
  <link rel="stylesheet" href="./CSS/jobdetails.css" />
-
+<link 
 
 </head>
 <script>
@@ -46,17 +47,34 @@
 
 <body>
 
-<!-- NAVBAR -->
-
-
-<header>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="applied-job.html">Applied Jobs</a>
-    <a href="login.html">Logout</a>
+<!-- GUEST NAVBAR VERSION -->
+<header class="guest-navbar">
+  <nav>
+    <div class="nav-brand">JobFinder</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="jobs.html">Jobs</a>
+    </div>
   </nav>
 </header>
+
+<!-- LOGGED-IN NAVBAR VERSION -->
+    <header class="guest-navbar">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+
+          <a href="jobs.html" class="active">Jobs</a>
+          <a href="applied-job.html">Applied Jobs</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="/index.html">LogOut</a>
+        </div>
+      </nav>
+    </header>
+
 
 <!-- PAGE -->
 
@@ -211,6 +229,8 @@ cloud orchestration tools.
 </div>
 
 
-
+    <footer style="width: 100%;">
+      <p>© 2026 JobFinder. All rights reserved.</p>
+    </footer>
 </body>
 </html>

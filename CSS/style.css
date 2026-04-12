@@ -27,6 +27,7 @@ body {
    ============================================ */
 
 header {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -240,6 +241,7 @@ main {
    ============================================ */
 
 footer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #1F2937;
   color: #FFFFFF;
   text-align: center;

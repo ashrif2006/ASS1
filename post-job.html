@@ -8,8 +8,42 @@
     <link rel="stylesheet" href="post-job.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/post-job.css">
+
 </head>
 <body>
+    <!-- GUEST NAVBAR VERSION -->
+    <header class="guest-navbar">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+
+          <a href="jobs.html" >Jobs</a>
+          <a href="applied-job.html">Applied Jobs</a>
+          <a href="post-job.html" class="active">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="/index.html">LogOut</a>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- LOGGED-IN NAVBAR VERSION -->
+    <header class="logged-in-navbar hidden">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+          <a href="index.html">Home</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="job-details.html">Job Details</a>
+          <a href="applied-job.html">Applied Jobs</a>
+          <a href="post-job.html" class="active">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </nav>
+    </header>
     <div class="wrap">
         <div class="cont">
             <!-- الجزء الشمال -->
@@ -91,6 +125,9 @@
             </form>
         </div>
     </div>
+        <footer>
+      <p>© 2026 JobFinder. All rights reserved.</p>
+    </footer>
     <script src="post-job.js"></script>
 </body>
 </html>

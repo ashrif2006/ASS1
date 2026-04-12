@@ -11,31 +11,10 @@
 body {
   background: #f5f7fb;
   color: #1f2937;
-  padding: 20px;
 }
 
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  background: #1e293b;
-  padding: 15px 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #38bdf8;
-  transform: translateY(-2px);
-}
 
 h1 {
   text-align: center;
@@ -145,3 +124,6 @@ footer {
   color: #6b7280;
   font-size: 13px;
 }
+
+
+

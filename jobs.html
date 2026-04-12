@@ -6,22 +6,40 @@
     <title>Jobs</title>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="./CSS/jobs.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">JobFinder</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="jobs.html" class="activeA">Jobs</a></li>
-        <li><a href="applied-job.html">Applied Jobs</a></li>
-        <li><a href="post-job.html">Post job</a></li>
-      </ul>
+    <!-- GUEST NAVBAR VERSION -->
+    <header class="guest-navbar">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
 
-      <div class="user">
-        <button>Logout</button>
-      </div>
-    </nav>
+          <a href="jobs.html" class="active">Jobs</a>
+          <a href="applied-job.html">Applied Jobs</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="/index.html">LogOut</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- LOGGED-IN NAVBAR VERSION -->
+    <header class="logged-in-navbar hidden">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+          <a href="index.html">Home</a>
+          <a href="jobs.html" class="active">Jobs</a>
+          <a href="job-details.html">Job Details</a>
+          <a href="applied-job.html">Applied Jobs</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </nav>
+    </header>
     <div class="content">
       <div class="search">
         <h2>Discover Opportunities</h2>
@@ -104,20 +122,8 @@
       </div>
     </div>
 
-<footer class="main-footer">
-    <div class="footer-container">
-        <div class="footer-left">
-            <h2 class="footer-logo">JobFinder</h2>
-            <p class="copyright">© 2026 JOBFINDER EDITORIAL. ALL RIGHTS RESERVED.</p>
-        </div>
-
-        <nav class="footer-links">
-            <a href="#">PRIVACY POLICY</a>
-            <a href="#">TERMS OF SERVICE</a>
-            <a href="#">CONTACT SUPPORT</a>
-            <a href="#">ABOUT US</a>
-        </nav>
-    </div>
-</footer>
+    <footer>
+      <p>© 2026 JobFinder. All rights reserved.</p>
+    </footer>
   </body>
 </html>
