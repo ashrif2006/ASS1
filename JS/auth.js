@@ -213,10 +213,6 @@ function validateSignupForm() {
   return isValid;
 }
 
-// ============================================
-// REAL-TIME VALIDATION
-// ============================================
-
 // Email validation on blur
 function setupEmailValidation() {
   const emailInput = document.getElementById('email');
@@ -308,10 +304,6 @@ function setupPhoneValidation() {
   }
 }
 
-// ============================================
-// FORM AUTO-SAVE (LocalStorage)
-// ============================================
-
 // Auto-save form data while typing
 function setupFormAutoSave(formId) {
   const form = document.getElementById(formId);
@@ -348,10 +340,6 @@ function clearFormData(formId) {
   });
 }
 
-// ============================================
-// INITIALIZATION
-// ============================================
-
 document.addEventListener('DOMContentLoaded', function() {
   // Setup form validation based on current page
   if (document.getElementById('loginForm')) {
@@ -382,10 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
-// ============================================
-// LOGOUT FUNCTION (can be called from other pages)
-// ============================================
 
 function logoutUser() {
   if (confirm('Are you sure you want to logout?')) {
