@@ -3,30 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Job Portal</title>
+    <title>JobFinder - Home</title>
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
 
   <body>
     <header>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+          <a href="index.html" class="active">Home</a>
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="jobs.html">Jobs</a>
+        </div>
       </nav>
     </header>
-    <hr>
 
     <main>
-      <h1>Welcome to Job Portal</h1>
-      <p>Find your dream job easily.</p>
+      <div class="hero-section">
+        <h1>Welcome to JobFinder</h1>
+        <p>Find your dream job easily and build your career with us.</p>
 
-      <a href="login.html"><button>Login</button></a>
-      <br>
-      <a href="login.html"><button>Sign Up</button></a>
+        <div class="hero-buttons">
+          <a href="login.html" class="btn btn-primary">Login</a>
+          <a href="signup.html" class="btn btn-secondary">Sign Up</a>
+        </div>
+      </div>
     </main>
-    <hr>
+
     <footer>
-      <p>© 2026 Job Portal</p>
+      <p>© 2026 JobFinder. All rights reserved.</p>
     </footer>
   </body>
 </html>
