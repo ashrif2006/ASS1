@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Applied Jobs</title>
+    <link rel="stylesheet" href="./CSS/appliedjobs.css">
   </head>
-
+ 
   <body>
     <header>
       <nav>
@@ -17,61 +18,85 @@
     <hr />
     <h1>My Applied Jobs</h1>
     <p>Here are the jobs you have applied for.</p>
+    <div class="jobs-container"></div>
 
-    <table border="1" cellpadding="10">
-      <tr>
-        <th>Job Title</th>
-        <th>Company</th>
-        <th>Location</th>
-        <th>Date Applied</th>
-        <th>Salary</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
-
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><button>View</button></td>
-      </tr>
-
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><button>View</button></td>
-      </tr>
-
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><button>View</button></td>
-      </tr>
-
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><button>View</button></td>
-      </tr>
-    </table>
+    
     <hr />
     <footer>
       <p>© 2026 Job Portal</p>
     </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const jobs = [
+        {
+          title: "Frontend Developer",
+          company: "Google",
+          location: "Remote",
+          salary: "$120K",
+          date: "10 Jan 2026",
+          status: "pending"
+        },
+        {
+          title: "Backend Engineer",
+          company: "Amazon",
+          location: "Cairo",
+          salary: "$150K",
+          date: "8 Jan 2026",
+          status: "accepted"
+        },
+        {
+          title: "Full Stack Developer",
+          company: "Microsoft",
+          location: "Remote",
+          salary: "$140K",
+          date: "5 Jan 2026",
+          status: "pending"
+        },
+        {
+          title: "UI/UX Designer",
+          company: "Adobe",
+          location: "Dubai",
+          salary: "$110K",
+          date: "2 Jan 2026",
+          status: "rejected"
+        },
+        {
+          title: "DevOps Engineer",
+          company: "Netflix",
+          location: "Remote",
+          salary: "$160K",
+          date: "1 Jan 2026",
+          status: "accepted"
+        }
+      ];
+
+      const container = document.querySelector(".jobs-container");
+
+      jobs.forEach(job => {
+
+        const card = document.createElement("div");
+        card.classList.add("job-card");
+
+        card.innerHTML = `
+          <div class="job-title">${job.title}</div>
+          <div class="company">${job.company}</div>
+
+          <div class="info">📍 ${job.location}</div>
+          <div class="info">💰 ${job.salary}</div>
+          <div class="info">📅 Applied: ${job.date}</div>
+
+          <div class="status ${job.status}">
+            ${job.status}
+          </div>
+
+          <button>View</button>
+        `;
+
+        container.appendChild(card);
+      });
+
+    });
+  </script>
   </body>
 </html>
