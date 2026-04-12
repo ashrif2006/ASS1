@@ -1,47 +1,36 @@
+const form = document.getElementById("jForm");
 
+let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
 
- document.addEventListener('DOMContentLoaded', function () {
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    var form = document.getElementById('jf'); // بدل jobForm
+  const title = document.getElementById("jopTitle").value;
+  const company = form.querySelectorAll("input")[1].value;
+  const status = form.querySelector("select").value;
+  const salary = form.querySelectorAll("input")[2].value;
+  const location = form.querySelectorAll("input")[3].value;
+  const description = form.querySelector("textarea").value;
+  const deadline = form.querySelectorAll("input")[4].value;
+  const email = form.querySelectorAll("input")[5].value;
 
-    if (!form) return;
+  const job = {
+    id: Date.now(),
+    title,
+    company,
+    status,
+    salary,
+    location,
+    description,
+    deadline,
+    email
+  };
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // منع الريفريش
+  jobs.push(job);
 
-        var btn = form.querySelector('.btn'); // بدل post-btn
-        var oldText = btn.innerText;
+  localStorage.setItem("jobs", JSON.stringify(jobs));
 
-        btn.innerText = 'Posting...';
-        btn.disabled = true;
+  alert("Job Added Successfully ✅");
 
-        var data = new FormData(form);
-        var obj = {};
-
-        data.forEach(function (value, key) {
-            obj[key] = value;
-        });
-
-        setTimeout(function () {
-            alert('Success!');
-
-            form.reset(); // مسح الفورم
-
-            btn.innerText = oldText;
-            btn.disabled = false;
-
-            console.log(obj);
-        }, 1000);
-    });
-
-    var inputs = document.querySelectorAll('input, select, textarea');
-
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('focus', function () {
-            this.parentElement.style.transition = '0.3s';
-        });
-    }
-
+  form.reset();
 });
-
-
