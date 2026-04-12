@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/jobs.css" />
+  </head>
+  <body>
+    <!-- GUEST NAVBAR VERSION -->
+    <header class="guest-navbar">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+
+          <a href="jobs.html" class="active">Jobs</a>
+          <a href="applied-job.html">Applied Jobs</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="/index.html">LogOut</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- LOGGED-IN NAVBAR VERSION -->
+    <header class="logged-in-navbar hidden">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+          <a href="index.html">Home</a>
+          <a href="jobs.html" class="active">Jobs</a>
+          <a href="job-details.html">Job Details</a>
+          <a href="applied-job.html">Applied Jobs</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="search">
+        <h2>Discover Opportunities</h2>
+        <input
+          type="text"
+          name="Title"
+          id="Title"
+          placeholder="Enter job title"
+        />
+        <button type="Submit">Search</button>
+      </div>
+
+      <div class="job-list">
+        <div class="total">Total Jobs: <span>100</span></div>
+
+        <table class="job-table">
+          <thead>
+            <tr>
+              <th>JOB TITLE</th>
+              <th>COMPANY</th>
+              <th>SALARY RANGE</th>
+              <th>STATUS</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="jobTableBody">
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 JobFinder. All rights reserved.</p>
+    </footer>
+    <script src="JS/show-job.js"></script>
+  </body>
+</html>

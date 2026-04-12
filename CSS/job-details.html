@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TechHire - Job Details</title>
+ <link rel="stylesheet" href="CSS/style.css" />
+ <link rel="stylesheet" href="./CSS/jobdetails.css" />
+<link 
+
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+    var a = document.querySelector('.apply-btn');
+    var s = document.querySelector('.save');
+   
+
+    if (a) {
+
+        a.onclick = function () {
+            a.innerText = 'Applying...';
+            a.disabled = true;
+            setTimeout(function () {
+                alert('done');
+                a.innerText = 'Apply Now';
+                a.disabled = false;
+            }, 1100);
+        };
+    }
+
+    if (s) {
+
+        var x = false;
+        s.onclick = function () {
+            if (x == false) {
+                s.innerText = 'Saved';
+                x = true;
+            } else {
+                s.innerText = 'Save';
+                x = false;
+            }
+        };
+    }
+ 
+});
+</script>
+
+<body>
+
+<!-- GUEST NAVBAR VERSION -->
+<header class="guest-navbar">
+  <nav>
+    <div class="nav-brand">JobFinder</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="jobs.html">Jobs</a>
+    </div>
+  </nav>
+</header>
+
+<!-- LOGGED-IN NAVBAR VERSION -->
+    <header class="guest-navbar">
+      <nav>
+        <div class="nav-brand">JobFinder</div>
+        <div>
+
+          <a href="jobs.html" class="active">Jobs</a>
+          <a href="applied-job.html">Applied Jobs</a>
+          <a href="post-job.html">Post Job</a>
+          <a href="edit-job.html">Edit Job</a>
+          <a href="/index.html">LogOut</a>
+        </div>
+      </nav>
+    </header>
+
+
+<!-- PAGE -->
+
+<div class="container">
+
+<!-- LEFT -->
+
+<div>
+
+<div class="job-card">
+
+<div class="job-header">
+
+<div>
+<div class="job-title">Senior Full Stack Engineer</div>
+<div class="company">CloudScale Solutions</div>
+<div class="job-meta">San Francisco • Posted 2 days ago • 50 applicants</div>
+</div>
+
+<div>
+<button class="apply-btn">Apply Now</button>
+<button class="save">Save</button>
+</div>
+
+</div>
+
+<div class="info-row">
+
+<div class="info-box">
+<strong>Salary Range</strong>
+$160K - $210K
+</div>
+
+<div class="info-box">
+<strong>Job Type</strong>
+Full-time
+</div>
+
+<div class="info-box">
+<strong>Experience</strong>
+5+ Years
+</div>
+
+</div>
+
+<div class="section">
+
+<h3>About the Role</h3>
+
+<p>
+CloudScale Solutions is looking for a Senior Full Stack Engineer
+to join our core product team. You will work on infrastructure
+supporting millions of concurrent users and build next-generation
+cloud orchestration tools.
+</p>
+
+</div>
+
+<div class="section">
+
+<h3>Key Responsibilities</h3>
+
+<ul>
+<li>Design and implement scalable applications.</li>
+<li>Build distributed systems handling large-scale data.</li>
+<li>Collaborate with product managers and designers.</li>
+<li>Optimize performance across multiple regions.</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h3>Requirements</h3>
+
+<ul>
+<li>B.S. in Computer Science or equivalent experience.</li>
+<li>5+ years of full-stack development.</li>
+<li>Experience with React, Next.js, Node.js.</li>
+<li>Knowledge of AWS, Docker, Kubernetes preferred.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDEBAR -->
+
+<div class="right-sidebar">
+
+  <div class="sidebar-card">
+
+    <h4 class="sidebar-title">About the Company</h4>
+
+    <div class="company-info">
+      <div class="info-item">👥 250-500 Employees</div>
+      <div class="info-item">💻 SaaS / Cloud Tech</div>
+    </div>
+
+    <button class="company-btn">View Company Profile</button>
+
+  </div>
+
+  <a 
+    href="https://www.google.com/maps?q=101+California+St+San+Francisco" 
+    target="_blank"
+    class="location-link"
+  >
+    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" class="icon">
+
+    <div>
+      <strong>Location</strong>
+      <p>
+        101 California St, Suite 2200<br>
+        San Francisco, CA
+      </p>
+    </div>
+  </a>
+
+</div>
+
+<!-- SIMILAR JOBS -->
+
+<div class="similar">
+
+<h3>Similar Job Openings</h3>
+
+<div class="job-list">
+
+<div class="job-item">
+<h4>Backend Engineer</h4>
+<p>DataFlow Systems • Remote</p>
+<div class="salary">$150K - $190K</div>
+</div>
+
+<div class="job-item">
+<h4>Frontend Lead</h4>
+<p>PixelPerfect UI • Austin</p>
+<div class="salary">$170K - $220K</div>
+</div>
+
+<div class="job-item">
+<h4>Security Engineer</h4>
+<p>SafeCloud Labs • San Francisco</p>
+<div class="salary">$180K - $230K</div>
+</div>
+
+</div>
+
+</div>
+
+
+    <footer style="width: 100%;">
+      <p>© 2026 JobFinder. All rights reserved.</p>
+    </footer>
+</body>
+</html>
