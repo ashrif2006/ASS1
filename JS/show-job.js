@@ -32,7 +32,10 @@ function displayJobs(data) {
         </td>
 
         <td>
-          <button onclick="deleteJob(${job.id})">Delete</button>
+          <button onclick="editJob(${job.id})">Edit Job</button>
+        </td>
+        <td>
+          <button onclick="showDetails(${job.id})">Show Details</button>
         </td>
       </tr>
     `;
@@ -41,19 +44,21 @@ function displayJobs(data) {
   });
 }
 
+function editJob(id) {
+  localStorage.setItem("editJobId", id);
+  window.location.href = "edit-job.html";
+  console.log(jobs[id]);
+}
+
+function showDetails(id) {
+  localStorage.setItem("showJobId", id);
+  window.location.href = "job-details.html";
+}
+
 displayJobs(jobs);
 
 
-function deleteJob(id) {
-  let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
 
-  jobs = jobs.filter(job => job.id !== id);
-
-  localStorage.setItem("jobs", JSON.stringify(jobs));
-
-  displayJobs(jobs);
-  totalJobs.textContent = jobs.length;
-}
 
 
 const searchInput = document.getElementById("Title");
