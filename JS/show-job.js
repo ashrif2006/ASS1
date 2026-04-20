@@ -7,6 +7,12 @@ totalJobs.textContent = jobs.length;
 console.log(jobs.length);
 
 function displayJobs(data) {
+  let isAdmin = false;
+  try {
+    const user = JSON.parse(localStorage.getItem("userData"));
+    isAdmin = user && user.role === 'admin';
+  } catch(e) {}
+
   tableBody.innerHTML = "";
 
   data.forEach(job => {
@@ -32,9 +38,7 @@ function displayJobs(data) {
         </td>
 
         <td>
-          <button onclick="editJob(${job.id})">Edit Job</button>
-        </td>
-        <td>
+          ${isAdmin ? `<button onclick="editJob(${job.id})" style="margin-right: 5px;">Edit Job</button>` : ''}
           <button onclick="showDetails(${job.id})">Show Details</button>
         </td>
       </tr>

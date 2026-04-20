@@ -105,7 +105,22 @@ function validateLoginForm() {
   // Check credentials if validation passed
   if (isValid) {
     const userData = getUserData();
-    if (userData && userData.email === email && userData.password === password) {
+    
+    // Check for hardcoded admin
+    if (email === 'ahmed@gmail.com' && password === '123456') {
+      const adminData = {
+        name: 'Ahmed (Admin)',
+        email: email,
+        password: password,
+        role: 'admin'
+      };
+      saveUserData(adminData);
+      setLoggedIn(email, adminData.name);
+      alert('Admin Login successful! Welcome back, Ahmed.');
+      window.location.href = 'jobs.html';
+    } 
+    // Regular user check
+    else if (userData && userData.email === email && userData.password === password) {
       setLoggedIn(email, userData.name);
       alert('Login successful! Welcome back, ' + userData.name);
       window.location.href = 'jobs.html';
@@ -195,13 +210,15 @@ function validateSignupForm() {
 
   // Save user data if validation passed
   if (isValid) {
+    const isAhmed = (email === 'ahmed@gmail.com');
     const userData = {
       name: name,
       email: email,
       password: password,
       phone: phone || '',
       cvName: cv ? cv.name : '',
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      role: isAhmed ? 'admin' : 'user'
     };
 
     saveUserData(userData);
